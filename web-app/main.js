@@ -52,10 +52,10 @@ let currentAnimal;
 let nextAnimal;
 // Animals that will be used in the game
 const animals = [
-    { name: "cat", texture: "cat.svg", width: 5, height: 5 },
-    //{ name: "dog", texture: "dog.svg", width: 70, height: 60 },
-    { name: "pig", texture: "pig.svg", width: 4, height: 4 },
-    //{ name: "panda", texture: "panda.svg", width: 65, height: 65 },
+    { name: "cat", texture: "./assets/cat.svg", width: 5, height: 5 },
+    //{ name: "dog", texture: "./assets/dog.svg", width: 70, height: 60 },
+    { name: "pig", texture: "./assets/pig.svg", width: 4, height: 4 },
+    //{ name: "panda", texture: "./assets/panda.svg", width: 65, height: 65 },
 ];
 
 
