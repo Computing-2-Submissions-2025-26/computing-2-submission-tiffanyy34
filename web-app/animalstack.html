@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Animal Stack</title>
+  <link rel="stylesheet" href="styling.css" />
+</head>
+<body>
+    <div id="screen1">
+
+        <div id="name-box">
+            <h1>Animal Stack</h1> 
+            <label>Player 1</label>
+            <input id="input-player1" type="text" placeholder="Enter name..." />
+
+            <label>Player 2</label>
+            <input id="input-player2" type="text" placeholder="Enter name..." />
+
+            <button id ="btn-play">Play!</button>
+
+        </div>
+    </div>
+    <div id="screen2">
+        <h1>Animal Stack</h1>
+        <div id="player-panels">
+            <div id="player1-panel">
+                <p>Player 1</p>
+                <p id="player1-name">Tiffany</p>
+            </div>
+
+            <div id="player2-panel">
+                <p>Player 2</p>
+                <p id="player2-name">Owen</p>
+            </div>
+        </div>
+
+        <div id="timer">60</div>
+
+
+    <div id="game-section">
+
+        <div id="next-preview">
+            <p>Next:</p>
+            <img src="" id="next-animal-img" />
+        </div>
+
+        <div id="center-game">
+            <div id="game-area"></div>
+        </div>
+
+    </div>
+
+        <div id="controls">
+            <button id="btn-rotate-left">A</button>
+            <button id="btn-left">←</button>
+            <button id="btn-drop">DROP</button>
+            <button id="btn-right">→</button>
+            <button id="btn-rotate-right">d</button>
+        </div>
+    </div>
+    <div id="screen3">
+        <div id ="end-game">
+            <h2 id="win-title">Player 1 Wins!</h2>
+            <button id="btn-playagain">Play Again</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script type="module" src="main.js"></script>       
+</body>
+</html>

@@ -1,0 +1,178 @@
+/* ── Reset — remove default browser styling ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ── Base — set defaults for the whole page ── */
+body {
+  font-family: sans-serif;
+  background-color: #87CEEB;
+}
+#screen1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#name-box {
+    background-color: #ffffff;
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#name-box h1 {
+    text-align: center;
+    font-size: 30px;
+    
+}
+#name-box label {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+#name-box input {
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+    margin-bottom: 10px;
+}
+#name-box button {
+    width: 200px;
+    height: 50px;
+    margin-top: 5px;
+    padding: 5px;
+    align-self: center;
+    background-color: rgb(175, 241, 241);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#screen2 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+#player-panels {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.active-player {
+  border: 3px solid rgb(55, 113, 206);
+  border-radius: 10px;
+}
+
+
+#game-section {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#next-preview {
+    width: 150px;
+    margin-top: -100px;
+}
+
+#game-area canvas {
+    width: 400px;
+    height: 500px;
+    margin-top: 30px;
+}
+
+/* #game-section { */
+  /* display: flex;
+  /* flex-direction: row; 
+  width: 100%;
+} */
+/* #game-area {
+  display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 50px;
+} */
+/* #game-area canvas {
+    justify-content: center;
+    width: 400px;
+    height: 400px; */
+/* } */
+#controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  bottom: 30px;
+}
+#controls button {
+  padding: 30px 30px;   /* same size for all buttons */
+}
+
+
+#next-preview {
+    position: absolute;
+    left: 50px;
+    top: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#next-animal-img {
+  width: 60px;
+  height: 60px;
+}
+#screen3 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+#end-game {
+    background-color: #ffffff;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    padding-top: 40px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+#end-game button{
+    width: 170px;
+    height: 60px;
+    align-self: center;
+    background-color: rgb(175, 241, 241);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+
+

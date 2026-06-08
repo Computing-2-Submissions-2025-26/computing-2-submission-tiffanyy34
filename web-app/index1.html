@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal Stack</title>
+  <link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       SCREEN 1 — NAME ENTRY
+       Shown first. Hidden once Play is clicked.
+  ============================================================ -->
+  <div id="screen-name-entry" class="screen active">
+
+    <h1 id="game-title">Animal Stack</h1>
+
+    <div id="name-entry-box">
+
+      <label for="input-player1">Player 1</label>
+      <input type="text" id="input-player1" placeholder="Enter name" maxlength="16" />
+
+      <label for="input-player2">Player 2</label>
+      <input type="text" id="input-player2" placeholder="Enter name" maxlength="16" />
+
+      <button id="btn-play">Play!</button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ============================================================
+       SCREEN 2 — GAME SCREEN
+       Hidden until Play is clicked.
+  ============================================================ -->
+  <div id="screen-game" class="screen hidden">
+
+    <header id="header">
+      <h1 id="game-title-small">Animal Stack</h1>
+    </header>
+
+    <!-- Player panels showing whose turn it is -->
+    <section id="player-panels">
+
+      <div id="player1-panel" class="player-panel active">
+        <p class="player-label">Player 1</p>
+        <p class="player-name" id="player1-name">Alex</p>
+        <p class="turn-indicator">Your turn!</p>
+      </div>
+
+      <div id="player2-panel" class="player-panel">
+        <p class="player-label">Player 2</p>
+        <p class="player-name" id="player2-name">Jordan</p>
+        <p class="turn-indicator"></p>
+      </div>
+
+    </section>
+
+    <!-- Main game area — Matter.js canvas goes here -->
+    <section id="game-area">
+
+      <!-- Animal waiting to be dropped -->
+      <div id="pending-animal">🦒</div>
+
+      <!-- Matter.js injects its canvas here -->
+      <div id="canvas-container"></div>
+
+      <!-- Platform at the bottom -->
+      <div id="platform"></div>
+
+    </section>
+
+    <!-- Keyboard controls -->
+    <section id="controls">
+
+      <div id="move-rotate-controls">
+        <button class="ctrl-btn" id="btn-rotate-left">↺ <span class="key-hint">Z</span></button>
+        <button class="ctrl-btn" id="btn-left">◀ <span class="key-hint">←</span></button>
+        <button class="ctrl-btn drop" id="btn-drop">DROP <span class="key-hint">Space</span></button>
+        <button class="ctrl-btn" id="btn-right">▶ <span class="key-hint">→</span></button>
+        <button class="ctrl-btn" id="btn-rotate-right">↻ <span class="key-hint">X</span></button>
+      </div>
+
+    </section>
+
+    <!-- Preview of next player's animal -->
+    <section id="next-animal-section">
+      <p id="next-label">Next up:</p>
+      <span id="next-animal">🐱</span>
+    </section>
+
+  </div>
+
+
+  <!-- ============================================================
+       SCREEN 3 — WIN SCREEN OVERLAY
+       Sits on top of Screen 2. Game behind it loses opacity.
+       Hidden until a player loses.
+  ============================================================ -->
+  <div id="screen-win" class="screen hidden">
+
+    <!-- Confetti pieces injected here by JS later -->
+    <div id="confetti-container"></div>
+
+    <div id="win-box">
+      <h2 id="win-title">Player 1 Wins!</h2>
+      <button id="btn-restart">Restart</button>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+  <script src="game1.js"></script>
+
+</body>
+</html>
